@@ -18,10 +18,32 @@
        .final{
         color:blueviolet;
        }
+
+       /* Descendant Selector */
       div p{
         color:tomato;
       }
-      
+
+      /* Child Selector */
+      div > p {
+         font-weight: bold;
+     }
+ 
+     /* Adjacent Sibling Selector */
+     h1 + p {
+  border: 2px solid teal;
+      }
+
+/* General Sibling Selector */
+div ~ ol {
+  background-color: lightgray;
+     }
+
+/* Combining with Lists */
+section ul li {
+  color: green;
+   }
+
     </style>
     <link rel="stylesheet" href="./style.css">
 </head>
@@ -43,10 +65,18 @@
     <p>paragraph: 1 in the div.</p>
     <p>paragraph: 2 in the div.</p>
     <section>
-        <p>paragraph: 3 in the div.</p>
+      <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+      </ul>
     </section>
  </div>
- <p>paragraph: 4 in the div.</p>
- <p>paragraph: 5 in the div.</p>
+      <ol>
+            <li>First Step</li>
+            <li>Second Step</li>
+             <li>Third Step</li>
+     </ol>
+ <a href="https://navayuvabharatinfotech.com/">Visit W3Schools.com!</a>
 </body>
 </html>
