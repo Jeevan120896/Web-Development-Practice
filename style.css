@@ -1,0 +1,74 @@
+/* Reset default styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
+  line-height: 1.6;
+  color: #333; /* Default text color */
+}
+
+/* Header styling */
+.header {
+  background-color: #333;
+  color: #fff;
+  padding: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  border-bottom: 5px solid #555;
+}
+
+/* Container for cards or content */
+.container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+}
+
+/* Individual card styling */
+.card {
+  background-color: #ffffff;
+  flex: 1;              /* Take equal space in flex container */
+  padding: 20px;
+  margin-bottom: 25px;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+}
+
+/* Card title */
+.card h2 {
+  margin-bottom: 10px;  /* Fixed typo (was 10x) */
+}
+
+/* Card paragraph */
+.card p {
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+button {
+  padding: 10px 20px;
+  border: 2px solid #333;
+  background-color: #87ceeb;
+  cursor: pointer;      /* Show pointer on hover */
+}
+
+/* Button hover effect */
+button:hover {
+  background-color: hsl(118, 74%, 54%);
+}
+
+/* Footer styling */
+.footer {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 15px;
+  border-top: 5px solid #555;
+}
