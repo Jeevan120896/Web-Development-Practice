@@ -1,0 +1,70 @@
+body{
+            background-color: rgb(99, 140, 168);
+        }
+     .orange {
+      color: orange;
+    }
+    .white {
+      color: white;
+    }
+    .green {
+      color: green;
+    }
+   
+    h2:hover{
+        color: rgb(255, 0, 0);
+    }
+    a:link{
+         background-color: rgb(199, 180, 180);
+    }
+    p::first-line{
+        color:red;
+        background-color: black;
+    }
+    h3::first-letter{
+        color: hsl(123, 100%, 50%);
+        font-size: 50px;
+    }
+    
+  ::marker{
+        color:crimson
+        
+    }
+
+    ::selection{
+        background-color: chartreuse;
+        color: brown;
+    }
+
+h4::before {
+  content: "🔥 ";
+  margin-right: 5px;
+  
+}
+h4::after {
+  content: "🔥 ";
+  margin-left: 5px;
+}
+  input:focus {
+  border: 2px solid blue;
+  outline: none;
+  background-color: #e0f7ff;
+}
+
+input:focus::placeholder {
+  color: red; 
+}
+ button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+
+  button:active {
+    background-color: #45a049;
+    
+  }

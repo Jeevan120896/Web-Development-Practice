@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            background-color:aliceblue;
+        }
+        h2{
+            background-color: green;
+             color: coral;
+        }
+       #heading{
+        color: chocolate;
+       }
+       .final{
+        color:blueviolet;
+       }
+
+       /* Descendant Selector */
+      div p{
+        color:tomato;
+      }
+
+      /* Child Selector */
+      div > p {
+         font-weight: bold;
+     }
+ 
+     /* Adjacent Sibling Selector */
+     h1 + p {
+  border: 2px solid teal;
+      }
+
+/* General Sibling Selector */
+div ~ ol {
+  background-color: lightgray;
+     }
+
+/* Combining with Lists */
+section ul li {
+  color: green;
+   }
+
+    </style>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <!-- Inline -->
+    <h1 style = "background-color: blue; color: red;">Cascading Style Sheet</h1>
+    <h2>Internal Method</h2>
+    <h2>Another Internal Method</h2>
+    <h3>External Style Sheet</h3>
+    <h4 id="heading">Hello every one</h4>
+    <h5 class="final">Welcome to NYB</h5>
+    
+ 
+
+<!-- Combinator Selectors -->
+ <h1 style="background-color: yellow; color:coral;">..Combinator Selectors..</h1>
+ <p style="color: teal;">The sun dipped below the horizon, casting a golden glow across the sky. Emily sat on the porch, sipping her tea and contemplating the beauty of nature. Her mind wandered to the many tasks that awaited her, yet in this moment, she felt a sense of peace.</p>
+ <div>
+    <p>paragraph: 1 in the div.</p>
+    <p>paragraph: 2 in the div.</p>
+    <section>
+      <ul>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+      </ul>
+    </section>
+ </div>
+      <ol>
+            <li>First Step</li>
+            <li>Second Step</li>
+             <li>Third Step</li>
+     </ol>
+ <a href="https://navayuvabharatinfotech.com/">Visit W3Schools.com!</a>
+</body>
+</html>
