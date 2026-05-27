@@ -1,0 +1,138 @@
+:root {
+  /* Primary Brand */
+  --primary: #0a3d62;
+  --primary-hover: #082c46;
+
+  /* Backgrounds */
+  --background: #f5f7fa;
+  --card-bg: #ffffff;
+  --input-bg: #ffffff;
+
+  /* Text Colors */
+  --text-primary: #1f2933;
+  --text-secondary: #6b7280;
+
+  /* Borders */
+  --border-light: #e5e7eb;
+}
+
+/* 1. Main Layout */
+.portal-container {
+  min-height: 100vh;
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 60px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 2. Titles */
+.portal-title {
+  font-size: 38px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  font-size: 16px;
+  color: var(--text-secondary);
+  margin-bottom: 40px;
+}
+
+/* 3. Role Selection */
+.role-selection {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 40px;
+}
+
+.role-btn {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  padding: 12px 24px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.role-btn:hover {
+  border-color: var(--primary);
+  color: var(--primary);
+}
+
+/* Active Button */
+.role-btn.active {
+  background-color: var(--primary);
+  color: #ffffff;
+  border-color: var(--primary);
+}
+
+/* 4. Login Card */
+.auth-card {
+  width: 100%;
+  max-width: 480px;
+  background-color: var(--card-bg);
+  padding: 40px;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.form-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+}
+
+/* 5. Inputs */
+.input-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid var(--border-light);
+  background-color: var(--input-bg);
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(10, 61, 98, 0.15);
+}
+
+input::placeholder {
+  color: var(--text-secondary);
+}
+
+/* 6. Submit Button */
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  background-color: var(--primary);
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-hover);
+}

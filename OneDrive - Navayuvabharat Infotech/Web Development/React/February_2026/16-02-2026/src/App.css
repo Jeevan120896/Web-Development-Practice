@@ -1,0 +1,22 @@
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+.hover-box {
+  margin-top: 20px;
+  padding: 10px;
+  width: 200px;
+  background-color: lightgray;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.hover-box:hover {
+  background-color: gray;
+  color: white;
+}
+
+hr {
+  margin: 20px 0;
+}
