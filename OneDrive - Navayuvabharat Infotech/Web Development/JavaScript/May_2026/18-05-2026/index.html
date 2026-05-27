@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Concepts</title>
+
+  <style>
+    body{
+      font-family: Arial;
+      background:#f4f4f4;
+      padding:20px;
+    }
+
+    .box{
+      background:white;
+      padding:15px;
+      margin-bottom:20px;
+      border-radius:10px;
+      box-shadow:0 0 5px gray;
+    }
+
+    button{
+      padding:8px 15px;
+      margin:5px;
+      cursor:pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript All Concepts</h1>
+
+  <!-- OUTPUT METHODS -->
+  <div class="box">
+    <h2>Output Methods</h2>
+
+    <p id="innerHTMLDemo"></p>
+    <p id="textContentDemo"></p>
+    <p id="innerTextDemo"></p>
+
+    <button onclick="showAlert()">alert()</button>
+    <button onclick="showPrompt()">prompt()</button>
+  </div>
+
+  <!-- WEB STORAGE -->
+  <div class="box">
+    <h2>Web Storage</h2>
+
+    <button onclick="saveLocal()">Save Local Storage</button>
+    <button onclick="getLocal()">Get Local Storage</button>
+
+    <br><br>
+
+    <button onclick="saveSession()">Save Session Storage</button>
+    <button onclick="getSession()">Get Session Storage</button>
+
+    <p id="storageResult"></p>
+  </div>
+
+  <!-- BOM -->
+  <div class="box">
+    <h2>Browser Object Model</h2>
+
+    <button onclick="showBOM()">Show BOM Info</button>
+
+    <p id="bomResult"></p>
+  </div>
+
+  <!-- COMMON METHODS -->
+  <div class="box">
+    <h2>Common Methods</h2>
+
+    <button onclick="runMethods()">Run Methods</button>
+
+    <p id="methodResult"></p>
+  </div>
+
+  <!-- LINK JS FILE -->
+  <script src="./script.js"></script>
+
+</body>
+</html>
