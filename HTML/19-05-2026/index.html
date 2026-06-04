@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML5 Concepts Example">
+
+    <title>HTML5 All Concepts</title>
+
+</head>
+<body>
+
+    <!-- Introduction to HTML5 -->
+    <h1>Introduction to HTML5</h1>
+    <p>
+        HTML5 is the latest version of HTML used to create web pages.
+    </p>
+
+    <!-- Element vs Tag -->
+    <h2>Element vs Tag</h2>
+    <p>
+        A tag is like &lt;p&gt; while an element contains opening tag,
+        content, and closing tag.
+    </p>
+
+    <!-- HTML Attributes -->
+    <h2>HTML Attributes</h2>
+    <p title="This is a tooltip">
+        This paragraph contains a title attribute.
+    </p>
+
+    <!-- Block & Inline Elements -->
+    <h2>Block & Inline Elements</h2>
+
+    <div>
+        I am a Block Element (DIV)
+    </div>
+
+    <span>
+        I am an Inline Element (SPAN)
+    </span>
+
+    <!-- Headings -->
+    <h2>Headings</h2>
+
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+
+    <!-- Paragraphs -->
+    <h2>Paragraphs</h2>
+
+    <p>
+        This is a paragraph in HTML.
+    </p>
+
+    <!-- Links -->
+    <h2>Links</h2>
+
+    <a href="https://www.google.com" target="_blank">
+        Visit Google
+    </a>
+
+    <!-- Images -->
+    <h2>Images</h2>
+
+    <img 
+        src="https://via.placeholder.com/150"
+        alt="Sample Image">
+
+    <!-- Lists -->
+    <h2>Lists</h2>
+
+    <h3>Ordered List</h3>
+    <ol>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+    </ol>
+
+    <h3>Unordered List</h3>
+    <ul>
+        <li>Apple</li>
+        <li>Banana</li>
+        <li>Mango</li>
+    </ul>
+
+    <!-- Tables -->
+    <h2>Tables</h2>
+
+    <table border="1">
+        <tr>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+
+        <tr>
+            <td>John</td>
+            <td>HTML</td>
+        </tr>
+
+        <tr>
+            <td>Mary</td>
+            <td>JavaScript</td>
+        </tr>
+    </table>
+
+    <!-- Iframes -->
+    <h2>Iframes</h2>
+
+    <iframe 
+        src="https://www.wikipedia.org"
+        width="300"
+        height="200">
+    </iframe>
+
+    <!-- Forms -->
+    <h2>Forms</h2>
+
+    <form>
+
+        <label>Name:</label>
+        <input type="text" placeholder="Enter Name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter Email">
+        <br><br>
+
+        <label>Password:</label>
+        <input type="password" placeholder="Enter Password">
+        <br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+    <!-- Semantic Elements -->
+    <h2>Semantic Elements</h2>
+
+    <header>
+        <h3>Header Section</h3>
+    </header>
+
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">About</a>
+    </nav>
+
+    <section>
+        <p>This is a section element.</p>
+    </section>
+
+    <article>
+        <p>This is an article element.</p>
+    </article>
+
+    <footer>
+        <p>Footer Section</p>
+    </footer>
+
+    <!-- Formatting Tags -->
+    <h2>Formatting Tags</h2>
+
+    <p>
+        <b>Bold</b><br>
+        <i>Italic</i><br>
+        <u>Underline</u><br>
+        <mark>Highlight</mark><br>
+        <small>Small Text</small>
+    </p>
+
+    <!-- Audio & Video -->
+    <h2>Audio & Video</h2>
+
+    <audio controls>
+        <source src="sample.mp3" type="audio/mpeg">
+    </audio>
+
+    <br><br>
+
+    <video width="300" controls>
+        <source src="sample.mp4" type="video/mp4">
+    </video>
+
+    <!-- Web Storage -->
+    <h2>Web Storage</h2>
+
+    <button onclick="saveData()">Save Data</button>
+
+    <p id="result"></p>
+
+    <!-- Adding JavaScript to HTML -->
+    <script>
+
+        // Local Storage
+        localStorage.setItem("course", "HTML5");
+
+        // Session Storage
+        sessionStorage.setItem("user", "Guest");
+
+        function saveData() {
+
+            localStorage.setItem("name", "Student");
+
+            let course = localStorage.getItem("course");
+            let user = sessionStorage.getItem("user");
+
+            document.getElementById("result").innerHTML =
+                "Course: " + course + "<br>" +
+                "User: " + user;
+        }
+
+    </script>
+
+</body>
+</html>

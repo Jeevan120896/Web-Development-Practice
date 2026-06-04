@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All-in-One HTML </title>
+
+  <!-- CSS -->
+  <style>
+    body {
+      font-family: Arial;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    .box {
+      padding: 10px;
+      background: white;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    button {
+      padding: 8px 12px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+
+<h1>HTML</h1>
+
+<!-- TEXT -->
+<div class="box">
+  <h2>Text & Formatting</h2>
+  <p id="text">Hello World</p>
+  <button onclick="changeText()">Change Text</button>
+</div>
+
+<!-- INPUT FORM -->
+<div class="box">
+  <h2>Form</h2>
+  <input type="text" id="name" placeholder="Enter name">
+  <button onclick="showName()">Submit</button>
+  <p id="output"></p>
+</div>
+
+<!-- LIST -->
+<div class="box">
+  <h2>Dynamic List</h2>
+  <input type="text" id="item" placeholder="Add item">
+  <button onclick="addItem()">Add</button>
+  <ul id="list"></ul>
+</div>
+
+<!-- COUNTER -->
+<div class="box">
+  <h2>Counter</h2>
+  <p id="count">0</p>
+  <button onclick="increment()">+</button>
+  <button onclick="decrement()">-</button>
+</div>
+
+<!-- COLOR CHANGE -->
+<div class="box">
+  <h2>Change Background</h2>
+  <button onclick="changeColor()">Change Color</button>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+
+  // VARIABLES
+  let count = 0;
+
+  // FUNCTION
+  function changeText() {
+    document.getElementById("text").innerHTML = "Text Changed!";
+  }
+
+  // FORM HANDLING
+  function showName() {
+    let name = document.getElementById("name").value;
+    document.getElementById("output").innerHTML = "Hello " + name;
+  }
+
+  // LIST (ARRAY + DOM)
+  function addItem() {
+    let value = document.getElementById("item").value;
+    let li = document.createElement("li");
+    li.textContent = value;
+    document.getElementById("list").appendChild(li);
+  }
+
+  // COUNTER
+  function increment() {
+    count++;
+    document.getElementById("count").innerHTML = count;
+  }
+
+  function decrement() {
+    count--;
+    document.getElementById("count").innerHTML = count;
+  }
+
+  // RANDOM COLOR
+  function changeColor() {
+    let colors = ["red", "blue", "green", "yellow", "orange"];
+    let random = colors[Math.floor(Math.random() * colors.length)];
+    document.body.style.background = random;
+  }
+
+  // EVENT LISTENER (Modern JS)
+  document.addEventListener("keydown", (e) => {
+    console.log("Key pressed:", e.key);
+  });
+
+  // LOOP EXAMPLE
+  for (let i = 0; i < 3; i++) {
+    console.log("Loop:", i);
+  }
+
+  // OBJECT
+  let person = {
+    name: "John",
+    age: 25
+  };
+  console.log(person.name);
+
+</script>
+
+</body>
+</html>
+

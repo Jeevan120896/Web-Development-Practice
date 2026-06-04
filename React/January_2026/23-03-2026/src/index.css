@@ -1,0 +1,37 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+button {
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  background-color: #1a1a1a;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  border: 1px solid #646cff;
+}
+
+input {
+  padding: 8px;
+  font-size: 14px;
+}

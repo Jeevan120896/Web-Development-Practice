@@ -1,0 +1,41 @@
+/* Center the app */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+}
+
+div {
+  text-align: center;
+  margin-top: 50px;
+}
+
+/* Heading */
+h2 {
+  color: #333;
+}
+
+/* Button style */
+button {
+  padding: 8px 16px;
+  margin: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Input style */
+input {
+  padding: 8px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 14px;
+}

@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS3 + Tailwind All Concepts</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <style>
+   
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      margin: 0;
+    }
+
+    /* CSS SELECTORS */
+    h1 {
+      color: darkblue;
+    }
+
+    .class-selector {
+      color: green;
+    }
+
+    #id-selector {
+      color: red;
+    }
+
+    /* CSS SPECIFICITY */
+    .specificity {
+      color: blue;
+    }
+
+    div .specificity {
+      color: orange;
+    }
+
+    /* COLORS & BACKGROUNDS */
+    .bg-demo {
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      color: white;
+      padding: 20px;
+    }
+
+    /* BORDERS */
+    .border-demo {
+      border: 4px solid black;
+      border-radius: 10px;
+    }
+
+    /* MARGIN & PADDING */
+    .space-demo {
+      margin: 20px;
+      padding: 20px;
+      background: white;
+    }
+
+    /* BOX MODEL */
+    .box-model {
+      width: 200px;
+      padding: 20px;
+      border: 5px solid blue;
+      margin: 20px;
+      background: lightyellow;
+    }
+
+    /* FLOAT */
+    .float-left {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background: coral;
+      margin-right: 10px;
+    }
+
+    /* POSITION */
+    .position-parent {
+      position: relative;
+      height: 150px;
+      background: #ddd;
+    }
+
+    .position-child {
+      position: absolute;
+      top: 20px;
+      left: 50px;
+      background: purple;
+      color: white;
+      padding: 10px;
+    }
+
+    /* Z-INDEX */
+    .z1, .z2 {
+      position: absolute;
+      width: 100px;
+      height: 100px;
+    }
+
+    .z1 {
+      background: red;
+      z-index: 1;
+      left: 20px;
+    }
+
+    .z2 {
+      background: blue;
+      z-index: 2;
+      left: 60px;
+      opacity: 0.7;
+    }
+
+    /* FLEXBOX */
+    .flex-container {
+      display: flex;
+      gap: 10px;
+      justify-content: space-around;
+    }
+
+    .flex-item {
+      background: teal;
+      color: white;
+      padding: 20px;
+    }
+
+    /* GRID SYSTEM */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+    }
+
+    .grid-item {
+      background: tomato;
+      color: white;
+      padding: 20px;
+    }
+
+    /* RESPONSIVE DESIGN */
+    @media (max-width: 768px) {
+      .grid-container {
+        grid-template-columns: 1fr;
+      }
+
+      body {
+        background: #dfe6e9;
+      }
+    }
+
+    /* !IMPORTANT */
+    .important-text {
+      color: green !important;
+    }
+
+    p {
+      color: black;
+    }
+
+    /* ALIGNMENTS */
+    .align-demo {
+      text-align: center;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- INLINE CSS -->
+  <h1 style="text-align:center;">CSS3 + Tailwind CSS Concepts</h1>
+
+  <!-- SELECTORS -->
+  <section class="space-demo">
+    <h2>CSS Selectors</h2>
+    <p class="class-selector">Class Selector</p>
+    <p id="id-selector">ID Selector</p>
+  </section>
+
+  <!-- SPECIFICITY -->
+  <section class="space-demo">
+    <h2>CSS Specificity</h2>
+    <div>
+      <p class="specificity">Orange wins due to higher specificity</p>
+    </div>
+  </section>
+
+  <!-- COLORS & BACKGROUND -->
+  <section class="bg-demo border-demo">
+    <h2>Colors & Background</h2>
+    <p>Gradient background with white text</p>
+  </section>
+
+  <!-- BOX MODEL -->
+  <section class="space-demo">
+    <h2>Box Model</h2>
+    <div class="box-model">
+      Content + Padding + Border + Margin
+    </div>
+  </section>
+
+  <!-- FLOAT -->
+  <section class="space-demo">
+    <h2>Float</h2>
+    <div class="float-left"></div>
+    <p>
+      This text wraps around the floated box.
+    </p>
+    <div style="clear:both;"></div>
+  </section>
+
+  <!-- POSITION -->
+  <section class="space-demo">
+    <h2>Position</h2>
+    <div class="position-parent">
+      <div class="position-child">
+        Absolute Positioned Box
+      </div>
+    </div>
+  </section>
+
+  <!-- Z-INDEX & OPACITY -->
+  <section class="space-demo" style="position:relative; height:150px;">
+    <h2>Z-Index & Opacity</h2>
+    <div class="z1"></div>
+    <div class="z2"></div>
+  </section>
+
+  <!-- FLEXBOX -->
+  <section class="space-demo">
+    <h2>Flexbox</h2>
+    <div class="flex-container">
+      <div class="flex-item">1</div>
+      <div class="flex-item">2</div>
+      <div class="flex-item">3</div>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <section class="space-demo">
+    <h2>Grid System</h2>
+    <div class="grid-container">
+      <div class="grid-item">A</div>
+      <div class="grid-item">B</div>
+      <div class="grid-item">C</div>
+    </div>
+  </section>
+
+  <!-- IMPORTANT -->
+  <section class="space-demo">
+    <h2>!important</h2>
+    <p class="important-text">
+      This text stays green because of !important
+    </p>
+  </section>
+
+  <!-- ALIGNMENT -->
+  <section class="space-demo align-demo">
+    <h2>Alignments</h2>
+    <p>Centered Text</p>
+  </section>
+
+  <!-- =========================
+       TAILWIND CSS
+  ========================== -->
+
+  <section class="p-5 bg-white m-5 rounded shadow">
+    <h2 class="text-3xl font-bold text-blue-600 mb-4">
+      Tailwind CSS Section
+    </h2>
+
+    <!-- Utility First -->
+    <p class="text-green-600 bg-yellow-200 p-3 mb-4 rounded">
+      Utility-First Concept Example
+    </p>
+
+    <!-- Margin & Padding -->
+    <div class="bg-red-200 m-4 p-4 rounded">
+      Margin & Padding Utilities
+    </div>
+
+    <!-- Container -->
+    <div class="container mx-auto bg-gray-200 p-4 mb-4">
+      Tailwind Container
+    </div>
+
+    <!-- Image Utilities -->
+    <img
+      src="https://via.placeholder.com/200"
+      class="rounded-lg shadow-lg border-4 border-blue-500 mb-4"
+      alt="demo"
+    />
+
+    <!-- Table Utilities -->
+    <table class="table-auto border-collapse border border-black w-full mb-4">
+      <thead>
+        <tr class="bg-blue-300">
+          <th class="border border-black p-2">Name</th>
+          <th class="border border-black p-2">Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="border border-black p-2">Jeevan</td>
+          <td class="border border-black p-2">29</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- Buttons -->
+    <button class="bg-blue-500 hover:bg-blue-700 text-white px-4 py-2 rounded">
+      Tailwind Button
+    </button>
+
+    <!-- Badges -->
+    <span class="bg-green-500 text-white px-3 py-1 rounded-full ml-3">
+      Badge
+    </span>
+
+    <!-- Cards -->
+    <div class="max-w-sm rounded overflow-hidden shadow-lg mt-6 bg-white">
+      <img
+        class="w-full"
+        src="https://via.placeholder.com/400x200"
+        alt="Card Image"
+      />
+      <div class="p-4">
+        <h3 class="font-bold text-xl">Card Title</h3>
+        <p class="text-gray-700">
+          Tailwind Card Component
+        </p>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="fixed bottom-5 right-5 bg-white border p-5 shadow-xl rounded">
+      <h3 class="font-bold">Modal</h3>
+      <p>This is a simple modal design.</p>
+    </div>
+
+    <!-- Tooltip -->
+    <div class="relative inline-block mt-6 group">
+      <button class="bg-purple-500 text-white px-4 py-2 rounded">
+        Hover Me
+      </button>
+
+      <div class="absolute hidden group-hover:block bg-black text-white text-sm rounded p-2 -top-10 left-0">
+        Tooltip Text
+      </div>
+    </div>
+
+    <!-- Dropdown -->
+    <div class="mt-6">
+      <select class="border p-2 rounded">
+        <option>Dropdown Item 1</option>
+        <option>Dropdown Item 2</option>
+      </select>
+    </div>
+
+  </section>
+
+</body>
+</html>

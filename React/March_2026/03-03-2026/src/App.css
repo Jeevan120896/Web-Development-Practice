@@ -1,0 +1,49 @@
+body {
+  background-color: #e4dfe2;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  color: #333;
+}
+
+h2 {
+  color: #6a5acd;
+  font-size: 40px;
+}
+
+button.btn {
+  padding: 10px 18px;
+  margin: 8px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  color: white;
+  transition: 0.3s;
+}
+
+button.increment {
+  background-color: #28a745; 
+}
+
+button.increment:hover {
+  background-color: #218838;
+}
+
+button.decrement {
+  background-color: #dc3545; 
+}
+
+button.decrement:hover {
+  background-color: #c82333;
+}
+
+button.reset {
+  background-color: #ffc107; 
+  color: black;
+}
+
+button.reset:hover {
+  background-color: #e0a800;
+}
