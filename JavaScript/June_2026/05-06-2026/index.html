@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ES6 Concepts</title>
+</head>
+<body>
+
+    <h2>ES6 Concepts Demo</h2>
+
+    <button id="saveBtn">Save User</button>
+    <button id="getBtn">Get User</button>
+
+    <script type="module">
+
+        import multiply, { add } from './mathUtils.js';
+        import { showDestructuring } from './destructuring.js';
+        import { divideNumbers } from './errorHandling.js';
+        import { showDataStructures } from './dataStructures.js';
+        import { saveUser, getUser } from './webStorage.js';
+
+        // ES6 Modules
+        console.log("Addition:", add(10, 20));
+        console.log("Multiplication:", multiply(10, 20));
+
+        // Destructuring
+        showDestructuring();
+
+        // Error Handling
+        divideNumbers(20, 4);
+        divideNumbers(20, 0);
+
+        // Data Structures
+        showDataStructures();
+
+        // Web Storage
+        document
+            .getElementById("saveBtn")
+            .addEventListener("click", saveUser);
+
+        document
+            .getElementById("getBtn")
+            .addEventListener("click", getUser);
+
+    </script>
+
+</body>
+</html>
