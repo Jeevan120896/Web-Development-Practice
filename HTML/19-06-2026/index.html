@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTML Concepts Demo</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:20px;
+}
+header,nav,section,article,aside,footer{
+    border:1px solid gray;
+    padding:15px;
+    margin:10px 0;
+}
+table{
+    border-collapse: collapse;
+}
+table,th,td{
+    border:1px solid black;
+    padding:8px;
+}
+</style>
+
+</head>
+<body>
+
+<!-- Semantic Elements -->
+
+<header>
+    <h1>HTML5 Complete Demonstration</h1>
+    <p>Forms, Semantic Elements, Formatting Tags, Audio, Video and Web Storage</p>
+</header>
+
+<nav>
+    <a href="#form">Form</a> |
+    <a href="#formatting">Formatting</a> |
+    <a href="#media">Media</a> |
+    <a href="#storage">Storage</a>
+</nav>
+
+<main>
+
+<section id="formatting">
+
+    <h2>Formatting Tags</h2>
+
+    <p><b>Bold Text</b></p>
+    <p><strong>Strong Text</strong></p>
+    <p><i>Italic Text</i></p>
+    <p><em>Emphasized Text</em></p>
+    <p><u>Underlined Text</u></p>
+    <p><mark>Highlighted Text</mark></p>
+    <p><small>Small Text</small></p>
+    <p><del>Deleted Text</del></p>
+    <p><ins>Inserted Text</ins></p>
+    <p>H<sub>2</sub>O</p>
+    <p>X<sup>2</sup> + Y<sup>2</sup></p>
+
+</section>
+
+<section>
+
+    <h2>Element vs Tag</h2>
+
+    <p>
+        Example Tag:
+        &lt;h1&gt;
+    </p>
+
+    <p>
+        Example Element:
+        &lt;h1&gt;Welcome&lt;/h1&gt;
+    </p>
+
+    <table>
+        <tr>
+            <th>Tag</th>
+            <th>Element</th>
+        </tr>
+        <tr>
+            <td>&lt;p&gt;</td>
+            <td>&lt;p&gt;Paragraph&lt;/p&gt;</td>
+        </tr>
+    </table>
+
+</section>
+
+<section id="form">
+
+    <article>
+
+        <h2>Student Registration Form</h2>
+
+        <form>
+
+            <label>Name:</label><br>
+            <input type="text" id="name"><br><br>
+
+            <label>Email:</label><br>
+            <input type="email"><br><br>
+
+            <label>Password:</label><br>
+            <input type="password"><br><br>
+
+            <label>Gender:</label><br>
+
+            <input type="radio" name="gender"> Male
+            <input type="radio" name="gender"> Female
+            <input type="radio" name="gender"> Other
+
+            <br><br>
+
+            <label>Skills:</label><br>
+
+            <input type="checkbox"> HTML
+            <input type="checkbox"> CSS
+            <input type="checkbox"> JavaScript
+
+            <br><br>
+
+            <label>City:</label><br>
+
+            <select>
+                <option>Vijayawada</option>
+                <option>Hyderabad</option>
+                <option>Chennai</option>
+                <option>Bangalore</option>
+            </select>
+
+            <br><br>
+
+            <label>Date of Birth:</label><br>
+            <input type="date"><br><br>
+
+            <label>Upload Resume:</label><br>
+            <input type="file"><br><br>
+
+            <label>Comments:</label><br>
+
+            <textarea rows="4" cols="40"></textarea>
+
+            <br><br>
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
+        </form>
+
+    </article>
+
+</section>
+
+<section id="media">
+
+    <h2>Audio Example</h2>
+
+    <audio controls>
+        <source src="song.mp3" type="audio/mpeg">
+    </audio>
+
+    <h2>Video Example</h2>
+
+    <video width="500" controls poster="thumbnail.jpg">
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+</section>
+
+<section id="storage">
+
+    <h2>Web Storage Example</h2>
+
+    <input type="text" id="username" placeholder="Enter Name">
+
+    <button onclick="saveData()">
+        Save to Local Storage
+    </button>
+
+    <button onclick="showData()">
+        Show Data
+    </button>
+
+    <button onclick="removeData()">
+        Remove Data
+    </button>
+
+    <p id="result"></p>
+
+</section>
+
+<aside>
+
+    <h3>Additional Information</h3>
+
+    <ul>
+        <li>Semantic elements improve SEO.</li>
+        <li>Forms collect user data.</li>
+        <li>Audio and Video support multimedia.</li>
+        <li>Local Storage stores data permanently.</li>
+    </ul>
+
+</aside>
+
+</main>
+
+<footer>
+
+    <p>
+        © 2025 HTML5 Demonstration Project
+    </p>
+
+</footer>
+
+<script>
+
+function saveData()
+{
+    let name =
+        document.getElementById("username").value;
+
+    localStorage.setItem("user",name);
+
+    alert("Data Saved Successfully");
+}
+
+function showData()
+{
+    let data =
+        localStorage.getItem("user");
+
+    document.getElementById("result").innerHTML =
+        "Stored Name : " + data;
+}
+
+function removeData()
+{
+    localStorage.removeItem("user");
+
+    document.getElementById("result").innerHTML =
+        "Data Removed";
+}
+
+</script>
+
+</body>
+</html>

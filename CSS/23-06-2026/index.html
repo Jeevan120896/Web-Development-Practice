@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Complete CSS Concepts Demonstration</title>
+
+    <!-- Internal CSS -->
+    <style>
+
+        /* ==========================
+           UNIVERSAL SELECTOR
+        ========================== */
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        /* ==========================
+           ELEMENT SELECTORS
+        ========================== */
+        body{
+            background-color:#f4f4f4;
+            line-height:1.6;
+        }
+
+        h1{
+            color:navy;
+            text-align:center;
+            margin:20px;
+        }
+
+        h2{
+            color:darkgreen;
+            margin-bottom:10px;
+        }
+
+        p{
+            color:black;
+            margin-bottom:10px;
+        }
+
+        /* ==========================
+           CLASS SELECTORS
+        ========================== */
+        .section{
+            background:white;
+            margin:20px;
+            padding:20px;
+            border-radius:10px;
+            border:2px solid #ddd;
+        }
+
+        .box{
+            background-color:lightyellow;
+            border:3px solid black;
+            padding:20px;
+            margin:15px 0;
+        }
+
+        .color-box{
+            padding:15px;
+            margin:10px 0;
+            color:white;
+            font-weight:bold;
+        }
+
+        .red{
+            background:red;
+        }
+
+        .green{
+            background:green;
+        }
+
+        .blue{
+            background:blue;
+        }
+
+        .center{
+            text-align:center;
+        }
+
+        /* ==========================
+           ID SELECTORS
+        ========================== */
+        #main-title{
+            text-transform:uppercase;
+            letter-spacing:3px;
+        }
+
+        #special-text{
+            color:red;
+            font-weight:bold;
+        }
+
+        /* ==========================
+           GROUP SELECTORS
+        ========================== */
+        table, th, td{
+            border:1px solid black;
+            border-collapse:collapse;
+            padding:10px;
+        }
+
+        /* ==========================
+           BACKGROUND PROPERTIES
+        ========================== */
+        .background-demo{
+            background-color:lightblue;
+            background-image:
+            linear-gradient(to right,
+            lightblue,
+            skyblue);
+
+            padding:25px;
+            border:2px dashed navy;
+            margin-top:10px;
+        }
+
+        /* ==========================
+           BORDER PROPERTIES
+        ========================== */
+        .border-demo1{
+            border:4px solid red;
+            padding:15px;
+            margin:10px 0;
+        }
+
+        .border-demo2{
+            border:4px dashed green;
+            padding:15px;
+            margin:10px 0;
+        }
+
+        .border-demo3{
+            border:4px dotted blue;
+            padding:15px;
+            margin:10px 0;
+        }
+
+        .border-demo4{
+            border:4px double purple;
+            padding:15px;
+            margin:10px 0;
+        }
+
+        /* ==========================
+           MARGIN DEMO
+        ========================== */
+        .margin-box{
+            background:orange;
+            margin:40px;
+            padding:10px;
+            color:white;
+        }
+
+        /* ==========================
+           PADDING DEMO
+        ========================== */
+        .padding-box{
+            background:teal;
+            color:white;
+            padding:40px;
+            margin:20px;
+        }
+
+        /* ==========================
+           SPECIFICITY DEMO
+        ========================== */
+
+        p{
+            color:black;
+        }
+
+        .demo{
+            color:green;
+        }
+
+        #specific{
+            color:purple;
+        }
+
+        /* ==========================
+           HOVER EFFECT
+        ========================== */
+        .button{
+            background:royalblue;
+            color:white;
+            border:none;
+            padding:12px 20px;
+            cursor:pointer;
+        }
+
+        .button:hover{
+            background:darkblue;
+        }
+
+        /* ==========================
+           TABLE STYLING
+        ========================== */
+        table{
+            width:100%;
+            margin-top:15px;
+        }
+
+        th{
+            background:navy;
+            color:white;
+        }
+
+        td{
+            text-align:center;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- =================================
+         INTRODUCTION TO CSS
+    ================================== -->
+
+    <h1 id="main-title">
+        Complete CSS Concepts Demonstration
+    </h1>
+
+    <div class="section">
+        <h2>1. Introduction to CSS</h2>
+        <p>
+            CSS (Cascading Style Sheets) is used to style HTML
+            elements. It controls colors, layouts, fonts,
+            spacing, borders, backgrounds and much more.
+        </p>
+    </div>
+
+    <!-- =================================
+         TYPES OF CSS
+    ================================== -->
+
+    <div class="section">
+        <h2>2. Types of CSS</h2>
+
+        <h3>Inline CSS Example</h3>
+        <p style="color:red; font-size:20px;">
+            This paragraph uses Inline CSS.
+        </p>
+
+        <h3>Internal CSS Example</h3>
+        <p>
+            This page uses Internal CSS inside the
+            &lt;style&gt; tag.
+        </p>
+
+        <h3>External CSS Example</h3>
+        <p>
+            External CSS is written in a separate file:
+        </p>
+
+<pre>
+&lt;link rel="stylesheet" href="style.css"&gt;
+</pre>
+    </div>
+
+    <!-- =================================
+         CSS SELECTORS
+    ================================== -->
+
+    <div class="section">
+        <h2>3. CSS Selectors</h2>
+
+        <p>
+            Element Selector styles all matching tags.
+        </p>
+
+        <p class="center">
+            Class Selector Example (.center)
+        </p>
+
+        <p id="special-text">
+            ID Selector Example (#special-text)
+        </p>
+
+        <p>
+            Universal Selector (*) applies styles to all
+            elements.
+        </p>
+    </div>
+
+    <!-- =================================
+         CSS SPECIFICITY
+    ================================== -->
+
+    <div class="section">
+        <h2>4. CSS Specificity</h2>
+
+        <p id="specific" class="demo">
+            This text becomes PURPLE because ID selectors
+            have higher specificity than class selectors
+            and element selectors.
+        </p>
+
+        <table>
+            <tr>
+                <th>Selector</th>
+                <th>Specificity</th>
+            </tr>
+            <tr>
+                <td>Element</td>
+                <td>1</td>
+            </tr>
+            <tr>
+                <td>Class</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>ID</td>
+                <td>100</td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- =================================
+         COLORS
+    ================================== -->
+
+    <div class="section">
+        <h2>5. CSS Colors</h2>
+
+        <div class="color-box red">
+            Named Color (Red)
+        </div>
+
+        <div class="color-box green">
+            HEX Color (#008000)
+        </div>
+
+        <div class="color-box blue">
+            RGB Color rgb(0,0,255)
+        </div>
+
+        <p style="color:hsl(300,100%,40%);">
+            HSL Color Example
+        </p>
+    </div>
+
+    <!-- =================================
+         BACKGROUNDS
+    ================================== -->
+
+    <div class="section">
+        <h2>6. CSS Backgrounds</h2>
+
+        <div class="background-demo">
+            This section demonstrates background color
+            and gradient background effects.
+        </div>
+    </div>
+
+    <!-- =================================
+         BORDERS
+    ================================== -->
+
+    <div class="section">
+        <h2>7. CSS Borders</h2>
+
+        <div class="border-demo1">
+            Solid Border
+        </div>
+
+        <div class="border-demo2">
+            Dashed Border
+        </div>
+
+        <div class="border-demo3">
+            Dotted Border
+        </div>
+
+        <div class="border-demo4">
+            Double Border
+        </div>
+    </div>
+
+    <!-- =================================
+         MARGINS
+    ================================== -->
+
+    <div class="section">
+        <h2>8. CSS Margins</h2>
+
+        <p>
+            Margin creates space outside an element.
+        </p>
+
+        <div class="margin-box">
+            This box has 40px margin.
+        </div>
+    </div>
+
+    <!-- =================================
+         PADDING
+    ================================== -->
+
+    <div class="section">
+        <h2>9. CSS Padding</h2>
+
+        <p>
+            Padding creates space inside an element.
+        </p>
+
+        <div class="padding-box">
+            This box has 40px padding.
+        </div>
+    </div>
+
+    <!-- =================================
+         COMBINED EXAMPLE
+    ================================== -->
+
+    <div class="section">
+        <h2>10. Combined Example</h2>
+
+        <div class="box">
+            <h3>Product Card</h3>
+
+            <p>
+                This card demonstrates:
+            </p>
+
+            <ul>
+                <li>Background Color</li>
+                <li>Border</li>
+                <li>Margin</li>
+                <li>Padding</li>
+                <li>Selectors</li>
+                <li>Typography Styling</li>
+            </ul>
+
+            <br>
+
+            <button class="button">
+                Buy Now
+            </button>
+        </div>
+    </div>
+
+    <!-- =================================
+         SUMMARY
+    ================================== -->
+
+    <div class="section">
+        <h2>11. Summary</h2>
+
+        <table>
+            <tr>
+                <th>Concept</th>
+                <th>Purpose</th>
+            </tr>
+
+            <tr>
+                <td>CSS</td>
+                <td>Styles HTML elements</td>
+            </tr>
+
+            <tr>
+                <td>Selectors</td>
+                <td>Select elements to style</td>
+            </tr>
+
+            <tr>
+                <td>Specificity</td>
+                <td>Determines which style wins</td>
+            </tr>
+
+            <tr>
+                <td>Colors</td>
+                <td>Change text/background colors</td>
+            </tr>
+
+            <tr>
+                <td>Backgrounds</td>
+                <td>Add colors/images behind content</td>
+            </tr>
+
+            <tr>
+                <td>Borders</td>
+                <td>Create element outlines</td>
+            </tr>
+
+            <tr>
+                <td>Margins</td>
+                <td>Space outside elements</td>
+            </tr>
+
+            <tr>
+                <td>Padding</td>
+                <td>Space inside elements</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
