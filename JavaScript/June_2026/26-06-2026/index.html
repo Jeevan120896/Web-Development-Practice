@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript All Concepts</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            padding:20px;
+        }
+
+        button{
+            margin:5px;
+            padding:8px 15px;
+        }
+
+        .box{
+            width:200px;
+            height:100px;
+            background:lightblue;
+            margin-top:20px;
+            padding:10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1 id="title">JavaScript Concepts Demo</h1>
+
+<p class="para">Paragraph 1</p>
+<p class="para">Paragraph 2</p>
+
+<input type="text" id="name" placeholder="Enter your name">
+
+<button id="btn">Click Me</button>
+
+<button id="change">Change Heading</button>
+
+<button id="add">Add Paragraph</button>
+
+<button id="remove">Remove Paragraph</button>
+
+<div class="box" id="box">
+    Mouse Events
+</div>
+
+<h2>Counter : <span id="count">0</span></h2>
+
+<button id="inc">+</button>
+<button id="dec">-</button>
+
+<script>
+
+console.log("========== BASICS ==========");
+
+let name = "Rahul";
+const age = 21;
+var city = "Hyderabad";
+
+console.log(name);
+console.log(age);
+console.log(city);
+
+let number = 100;
+let text = "JavaScript";
+let isStudent = true;
+let value = null;
+let data;
+
+console.log(typeof number);
+console.log(typeof text);
+console.log(typeof isStudent);
+console.log(typeof value);
+console.log(typeof data);
+
+let a = 20;
+let b = 5;
+
+console.log(a+b);
+console.log(a-b);
+console.log(a*b);
+console.log(a/b);
+console.log(a%b);
+
+if(age>=18){
+    console.log("Eligible");
+}
+else{
+    console.log("Not Eligible");
+}
+
+let day=2;
+
+switch(day){
+
+case 1:
+console.log("Monday");
+break;
+
+case 2:
+console.log("Tuesday");
+break;
+
+default:
+console.log("Invalid");
+
+}
+
+console.log("For Loop");
+
+for(let i=1;i<=5;i++){
+    console.log(i);
+}
+
+console.log("While Loop");
+
+let i=1;
+
+while(i<=5){
+    console.log(i);
+    i++;
+}
+
+console.log("Do While");
+
+let j=1;
+
+do{
+    console.log(j);
+    j++;
+}
+while(j<=5);
+
+
+
+console.log("========== FUNCTIONS ==========");
+
+function greet(name){
+    console.log("Hello "+name);
+}
+
+greet("Rahul");
+
+function add(x,y){
+    return x+y;
+}
+
+console.log(add(10,20));
+
+const multiply=function(x,y){
+    return x*y;
+}
+
+console.log(multiply(5,6));
+
+const square=(n)=>n*n;
+
+console.log(square(7));
+
+function welcome(user="Guest"){
+    console.log("Welcome "+user);
+}
+
+welcome();
+welcome("Anjali");
+
+
+
+console.log("========== OBJECTS ==========");
+
+const student={
+
+name:"Rahul",
+
+age:21,
+
+course:"B.Tech",
+
+marks:95,
+
+greet:function(){
+
+console.log("Hello "+this.name);
+
+}
+
+};
+
+console.log(student);
+
+console.log(student.name);
+
+console.log(student["course"]);
+
+student.city="Hyderabad";
+
+console.log(student);
+
+student.age=22;
+
+console.log(student);
+
+delete student.course;
+
+console.log(student);
+
+student.greet();
+
+console.log(Object.keys(student));
+
+console.log(Object.values(student));
+
+console.log(Object.entries(student));
+
+
+
+console.log("========== DOM ==========");
+
+const heading=document.getElementById("title");
+
+console.log(heading);
+
+const paragraphs=document.getElementsByClassName("para");
+
+console.log(paragraphs);
+
+const button=document.getElementById("btn");
+
+console.log(button);
+
+const firstPara=document.querySelector(".para");
+
+console.log(firstPara);
+
+const allPara=document.querySelectorAll(".para");
+
+console.log(allPara);
+
+
+
+document.getElementById("change").addEventListener("click",function(){
+
+heading.innerText="Heading Changed";
+
+heading.style.color="red";
+
+heading.style.fontSize="40px";
+
+});
+
+
+
+document.getElementById("add").addEventListener("click",function(){
+
+let p=document.createElement("p");
+
+p.innerText="New Paragraph Added";
+
+document.body.appendChild(p);
+
+});
+
+
+
+document.getElementById("remove").addEventListener("click",function(){
+
+const para=document.querySelector(".para");
+
+if(para){
+para.remove();
+}
+
+});
+
+
+
+console.log("========== EVENT HANDLING ==========");
+
+
+
+button.addEventListener("click",function(){
+
+alert("Button Clicked");
+
+});
+
+
+
+button.addEventListener("dblclick",function(){
+
+console.log("Double Click");
+
+});
+
+
+
+button.addEventListener("mouseover",function(){
+
+button.style.background="yellow";
+
+});
+
+
+
+button.addEventListener("mouseout",function(){
+
+button.style.background="";
+
+});
+
+
+
+const input=document.getElementById("name");
+
+
+
+input.addEventListener("keyup",function(){
+
+console.log(input.value);
+
+});
+
+
+
+input.addEventListener("change",function(){
+
+alert("Changed : "+input.value);
+
+});
+
+
+
+const box=document.getElementById("box");
+
+
+
+box.addEventListener("mouseenter",function(){
+
+box.style.background="orange";
+
+box.innerText="Mouse Enter";
+
+});
+
+
+
+box.addEventListener("mouseleave",function(){
+
+box.style.background="lightblue";
+
+box.innerText="Mouse Left";
+
+});
+
+
+
+console.log("========== COUNTER ==========");
+
+
+
+let count=0;
+
+const display=document.getElementById("count");
+
+
+
+document.getElementById("inc").addEventListener("click",function(){
+
+count++;
+
+display.innerText=count;
+
+});
+
+
+
+document.getElementById("dec").addEventListener("click",function(){
+
+count--;
+
+display.innerText=count;
+
+});
+
+
+
+button.addEventListener("click",function(event){
+
+console.log(event.type);
+
+console.log(event.target);
+
+});
+
+</script>
+
+</body>
+</html>
